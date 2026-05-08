@@ -128,22 +128,22 @@ button:hover {
     0%, 2.4% {
         content: 'Experience authentic flavors and exceptional dining';
         opacity: 1;
-        transform: translateY(20px);
+        transition: all 0.3s ease;;
     }
     2.4%, 50% {
         content: 'Experience authentic flavors and exceptional dining';
         opacity: 1;
-        transform: translateY(0);
+        transition: all 0.3s ease;
     }
     50%, 52.4% {
         content: 'Our menu features a variety of dishes prepared using the latest cooking techniques';
         opacity: 1;
-        transform: translateY(20px);
+        transition: all 0.3s ease;
     }
     52.4%, 100% {
         content: 'Our menu features a variety of dishes prepared using the latest cooking techniques';
         opacity: 1;
-        transform: translateY(0);
+        transition: all 0.3s ease;
     }
 }
 
