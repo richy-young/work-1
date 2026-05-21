@@ -6,24 +6,26 @@
     text-decoration: none;
 }
 
-:root{
-  --primary-color--: #111111;
-  --primary: #111111;
-  --secondary-color--: #c45308;
-  --secondary: #c45308;
-  --light: #eea95e;
-  --white: #ffffff;
-  --dark: #1f1f1f;
-  --text: #4d4d4d;
-  --gold: #f5c35c;
-  --shadow: rgba(0,0,0,0.1);
+:root {
+    --primary-color--: #111111;
+    --primary: #111111;
+    --secondary-color--: #c45308;
+    --secondary: #c45308;
+    --light: #eea95e;
+    --white: #ffffff;
+    --dark: #1f1f1f;
+    --text: #4d4d4d;
+    --gold: #f5c35c;
+    --shadow: rgba(0, 0, 0, 0.1);
 }
+
 @font-face {
     font-family: 'herofont';
     src: url(../Almadinah.ttf) format('truetype');
 }
 
-html, body {
+html,
+body {
     font-size: 100%;
     font-style: normal;
     font-optical-sizing: auto;
@@ -33,24 +35,27 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+
 }
-header{
+
+header {
     position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.8);
-         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-header > .logo > a{
-    font-size:clamp(2.5rem, 4vw, 2.5rem);
+
+header>.logo>a {
+    font-size: clamp(2.5rem, 4vw, 2.5rem);
     color: var(--primary-color--);
     font-family: 'herofont';
 }
-.navlink ul{
+
+.navlink ul {
     display: inline-flex;
     gap: 18px;
 }
@@ -60,9 +65,11 @@ header > .logo > a{
     color: #000000;
     padding: 0.4rem 0.2rem;
 }
+
 .navlink ul li a:hover {
     color: #c45308;
 }
+
 button {
     background-color: var(--secondary-color--);
     color: white;
@@ -75,21 +82,39 @@ button {
 
 button:hover {
     color: black;
-    background-color: rgb(73, 85, 95);  
+    background-color: rgb(73, 85, 95);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero {
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Image/images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Image/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.open-btn {
+    background-color: var(--secondary-color--);
+    color: rgb(240, 233, 233);
+    border: none;
+    font-weight: 600;
+    padding: 0.7rem 1.3rem;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+
+.open-btn:hover {
+    color: black;
+    background-color: rgb(73, 85, 95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* --- MODAL STYLES --- */
@@ -101,16 +126,18 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(94, 42, 42, 0.6); /* Dims the homepage */
-    backdrop-filter: blur(5px);           /* Blurs the background */
+    background-color: rgba(223, 205, 205, 0.576);
+    /* Dims the homepage */
+    backdrop-filter: blur(5px);
+    /* Blurs the background */
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     /* Hidden by default */
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.2s ease in ease-in-out;
 }
 
 /* 2. The actual white form box */
@@ -119,30 +146,31 @@ button:hover {
     padding: 80px;
     width: 100%;
     max-width: 400px;
-    border-radius: 12px;
+    border-radius: 20px;
     position: relative;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.354);
 }
 
 /* 3. The CSS Magic: Show the modal when its ID is targeted */
 .modal-overlay:target {
-    opacity: 1;
+    opacity: 2;
     pointer-events: auto;
 }
 
 /* Form Inner Elements */
 .close-btn {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 4px;
+    right: 12px;
     font-size: 1000%;
     text-decoration: none;
-    color: hwb(0 0% 100% / 0.322);
+    color:  #ea7209;
 }
 
 .modal-box h2 {
     margin-bottom: 22px;
-    color: #000000;
+    color: #975a5aa5;
+    font-size: 1.8rem;
 }
 
 .signin-form input {
@@ -150,56 +178,57 @@ button:hover {
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: 6px;
+    border-radius: 30px;
     font-size: 16px;
 }
 
 .submit-btn {
     width: 100%;
     padding: 12px;
-    background-color: #16212a;
-    color: rgb(183, 117, 117);
+    background-color:  rgb(73, 85, 95);;
+    color: rgb(214, 197, 197);
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 30px;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
 }
 
 .submit-btn:hover {
-    background-color: #0773c5;
+    background-color: #ea7209;
 }
 
 .hero-content {
-  max-width: 1000px;
-  padding: 4rem;
-  animation: fadeIn 1.6s ease-in-out;
+    max-width: 1000px;
+    padding: 4rem;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-content h1 {
-  font-size: clamp(3rem, 14vw, 8rem);
-  margin-bottom: 1rem;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.438);
+    font-size: clamp(3rem, 14vw, 8rem);
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.438);
 }
 
 .hero-content p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: clamp(1.2rem,3vw,1.5rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     position: relative;
     min-height: 1.5em;
 }
@@ -210,22 +239,31 @@ button:hover {
 }
 
 @keyframes content-p {
-    0%, 2.4% {
+
+    0%,
+    2.4% {
         content: 'Experience authentic flavors and exceptional dining';
         opacity: 1;
-        transition: all 0.3s ease;;
+        transition: all 0.3s ease;
+        ;
     }
-    2.4%, 50% {
+
+    2.4%,
+    50% {
         content: 'Experience authentic flavors and exceptional dining';
         opacity: 1;
         transition: all 0.3s ease;
     }
-    50%, 52.4% {
+
+    50%,
+    52.4% {
         content: 'Our menu features a variety of dishes prepared using the latest cooking techniques';
         opacity: 1;
         transition: all 0.3s ease;
     }
-    52.4%, 100% {
+
+    52.4%,
+    100% {
         content: 'Our menu features a variety of dishes prepared using the latest cooking techniques';
         opacity: 1;
         transition: all 0.3s ease;
@@ -233,29 +271,30 @@ button:hover {
 }
 
 .cta-button {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 20px 30px;
-  background-color: var(--secondary-color--);
-  color: #fff;
-  font-size: 1.2rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 40px;
+    padding: 20px 30px;
+    background-color: var(--secondary-color--);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .navlink ul {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .navlink ul li a {
-    font-size: 18px;
-  }
-  
-  
+    .navlink ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navlink ul li a {
+        font-size: 18px;
+    }
+
+
 }
 
 .page-hero {
@@ -264,7 +303,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding: 80px 20px;
-    background: linear-gradient(180deg, rgba(196,83,8,0.16), rgba(255,255,255,0.96));
+    background: linear-gradient(180deg, rgba(196, 83, 8, 0.16), rgba(255, 255, 255, 0.96));
     text-align: center;
 }
 
@@ -296,57 +335,57 @@ button:hover {
 }
 
 .about {
-  display: flex;
-  gap: 40px;
-  padding: 60px 40px;
-  background: var(--white)
+    display: flex;
+    gap: 40px;
+    padding: 60px 40px;
+    background: var(--white)
 }
 
 .about-images {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(120px, 1fr));
-  gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 16px;
 }
 
 .about-images img {
-  width: 100%;
-  display: block;
-  border-radius: 30px;
-  object-fit: cover;
-  min-height: 160px;
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+    object-fit: cover;
+    min-height: 160px;
 }
 
 .about-text {
-  max-width: 560px; 
-  font-size: clamp(1.5rem, 4vw, 1.5rem);
+    max-width: 560px;
+    font-size: clamp(1.5rem, 4vw, 1.5rem);
 }
 
 .about-text h2 {
-  margin: 10px 0 18px;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  line-height: 1.1;
-  color: var(--dark);
+    margin: 10px 0 18px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.1;
+    color: var(--dark);
 }
 
 .about-text p {
-  color: var(--text);
-  font-size: clamp(1.5rem, 4vw, 1.5rem);
-  line-height: 1.85;
+    color: var(--text);
+    font-size: clamp(1.5rem, 4vw, 1.5rem);
+    line-height: 1.85;
 }
 
 .stats {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .stats div {
-  background: #f8f5f1;
-  padding: 16px 18px;
-  border-radius: 14px;
-  color: var(--dark);
-  font-weight: 600;
+    background: #f8f5f1;
+    padding: 16px 18px;
+    border-radius: 14px;
+    color: var(--dark);
+    font-weight: 600;
 }
 
 .btn {
@@ -386,7 +425,7 @@ button:hover {
 .about-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .experience-badge {
@@ -398,7 +437,7 @@ button:hover {
     padding: 25px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .experience-badge .years {
@@ -425,6 +464,7 @@ button:hover {
     line-height: 1.8;
     font-size: 1.05rem;
 }
+
 .features-list {
     list-style: none;
     margin: 30px 0;
@@ -500,7 +540,7 @@ button:hover {
 
 .menu-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .menu-image {
@@ -529,7 +569,7 @@ button:hover {
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.75rem;
-    font-weight: 700;  
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -581,18 +621,18 @@ button:hover {
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  .about-images img {
-    width: 100px;
-  }
+    .about-images img {
+        width: 100px;
+    }
 
-  .about-text {
-    max-width: none;
-  }
-  
+    .about-text {
+        max-width: none;
+    }
+
 }
