@@ -133,6 +133,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
     /* Hidden by default */
     opacity: 0;
@@ -155,6 +156,7 @@ button:hover {
 .modal-overlay:target {
     opacity: 2;
     pointer-events: auto;
+    animation: content-p 50s ease infinite;
 }
 
 /* Form Inner Elements */
@@ -164,7 +166,10 @@ button:hover {
     right: 12px;
     font-size: 1000%;
     text-decoration: none;
-    color:  #ea7209;
+    color:  #ea7209
+}
+.close-btn:hover {
+    color: rgb(73, 85, 95);
 }
 
 .modal-box h2 {
@@ -181,6 +186,7 @@ button:hover {
     border-radius: 30px;
     font-size: 16px;
 }
+
 
 .submit-btn {
     width: 100%;
